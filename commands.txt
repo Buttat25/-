@@ -1,0 +1,144 @@
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git clone https://github.com/Buttat25/-.git
+Cloning into '-'...
+warning: You appear to have cloned an empty repository.
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ echo "Первый цвет российского флага - белый." > flagcolors.txt
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ cat flagcolors.txt
+Первый цвет российского флага - белый.
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$  git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   flagcolors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        -/
+
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git add flagcolors.txt
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   flagcolors.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        -/
+
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git commit -m "white"
+[master (root-commit) 52a0a61] white
+ 1 file changed, 1 insertion(+)
+ create mode 100644 flagcolors.txt
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git log
+commit 52a0a6122b3410e0df148cc43fb952bc7bf4b0a4 (HEAD -> master)
+Author: Buttat25 <butovatt@mail.ru>
+Date:   Sat Sep 5 10:16:20 2026 +0500
+
+    white
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ echo "Синий - второй цвет российского флага." >> flagcolors.txt
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git add flagcolors.txt
+warning: in the working copy of 'flagcolors.txt', LF will be replaced by CRLF the next time Git touches it
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$  git commit -m "blue"
+[master fbda840] blue
+ 1 file changed, 1 insertion(+)
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git log
+commit fbda8408739b1cf83cc892519693e7e0e7c14836 (HEAD -> master)
+Author: Buttat25 <butovatt@mail.ru>
+Date:   Sat Sep 5 10:17:18 2026 +0500
+
+    blue
+
+commit 52a0a6122b3410e0df148cc43fb952bc7bf4b0a4
+Author: Buttat25 <butovatt@mail.ru>
+Date:   Sat Sep 5 10:16:20 2026 +0500
+
+    white
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ echo "Красный - третий цвет российского флага." >> flagcolors.txt
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git add flagcolors.txt
+warning: in the working copy of 'flagcolors.txt', LF will be replaced by CRLF the next time Git touches it
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git commit -m "red"
+[master 9b48172] red
+ 1 file changed, 1 insertion(+)
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$  git log
+commit 9b48172310fa47c19f9085391a756e402f1b0030 (HEAD -> master)
+Author: Buttat25 <butovatt@mail.ru>
+Date:   Sat Sep 5 10:18:16 2026 +0500
+
+    red
+
+commit fbda8408739b1cf83cc892519693e7e0e7c14836
+Author: Buttat25 <butovatt@mail.ru>
+Date:   Sat Sep 5 10:17:18 2026 +0500
+
+    blue
+
+commit 52a0a6122b3410e0df148cc43fb952bc7bf4b0a4
+Author: Buttat25 <butovatt@mail.ru>
+Date:   Sat Sep 5 10:16:20 2026 +0500
+
+    white
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git remote add origin https://github.com/Buttat25/-.git
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 729 bytes | 729.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Buttat25/-.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+stud@DESKTOP-IM9HDAF MINGW64 /e/tehnologii pro (master)
+$
+
