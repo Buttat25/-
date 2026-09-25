@@ -38,3 +38,4 @@ while True:
         print("\nИгра окончена.")
         break
 print(f'Текущий счет - Игрок: {player_wins}, Компьютер: {computer_wins}, Ничьи: {draws}')
+print('Спасибо за игру'git branch -D dev-temp1')
