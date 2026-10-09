@@ -1,0 +1,19 @@
+delimoe_number = int(input("Введите десятичное число: "))
+
+if delimoe_number == 0:
+    print("0")
+else:
+    digits = []
+    
+    while delimoe_number > 0:
+        ostatok = delimoe_number % 3
+        digits.append(ostatok)
+        delimoe_number = delimoe_number // 3
+        
+    digits.reverse()
+    
+    result = ""
+    for num in digits:
+        result = result + str(num)
+        
+    print("В троичной системе:", result)
