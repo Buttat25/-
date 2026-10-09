@@ -1,0 +1,16 @@
+vhodnoy_tekst = input("Введите текст: ")
+
+znaki = "\.,!?;:()[]{}*=+`~&^<>#@$%|-\"\'"
+for znak in znaki:
+    vhodnoy_tekst = vhodnoy_tekst.replace(znak, " ")
+
+vse_slova = vhodnoy_tekst.split()
+palindromy = []
+
+for slovo in vse_slova:
+    slovo_malenkoe = slovo.lower()
+    
+    if slovo_malenkoe == slovo_malenkoe[::-1]:
+        palindromy.append(slovo)
+
+print("Найденные палиндромы:", palindromy)
