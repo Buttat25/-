@@ -1,15 +1,14 @@
-word_1 = input("Введите первое слово: ")
-word_2 = input("Введите второе слово: ")
+vhodnoy_tekst = input("Введите текст: ")
+znaki = "."№;%:?*+=`~|<>,\!?;:()-\"'"
+for znak in znaki:
+    vhodnoy_tekst = vhodnoy_tekst.replace(znak, " ")
 
-list_1 = list(word_1)
-list_2 = list(word_2)
+vse_slova = vhodnoy_tekst.split()
+palindromy = []
 
-for letter in list_1:
-  
-    if letter in list_2:
-        list_2.remove(letter) 
-
-if len(list_2) == 0 and len(word_1) == len(word_2):
-    print("Да, это анаграммы!")
-else:
-    print("Нет, это не анаграммы.")
+for slovo in vse_slova:
+    slovo_malenkoe = slovo.lower()
+    if len(slovo_malenkoe) > 1:
+        if slovo_malenkoe == slovo_malenkoe[::-1]:
+            palindromy.append(slovo)
+print("Найденные палиндромы:", palindromy)
